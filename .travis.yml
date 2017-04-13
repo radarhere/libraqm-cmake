@@ -23,9 +23,8 @@ before_install:
       docker build -t raqm -f .dockerfile .;
     fi
   - if [ "$TRAVIS_OS_NAME" == "osx" ]; then
-      brew update;
-      brew uninstall libtool && brew install libtool;
-      brew install freetype harfbuzz fribidi glib gtk-doc;
+      brew install freetype fribidi glib gtk-doc;
+      brew install --without-icu4c --without-glib --without-gobject-introspection harfbuzz;
       export XML_CATALOG_FILES="/usr/local/etc/xml/catalog";
     fi;
   - if [ "${TRAVIS_OS_NAME}" == "osx" -a "${CC}" == "gcc" ]; then export CC=gcc-4.8; fi
