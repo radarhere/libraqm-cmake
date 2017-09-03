@@ -1,5 +1,4 @@
-sudo: required # needed for trusty beta
-dist: trusty   # needed for HarfBuzz
+dist: trusty
 services:
 - docker
 
@@ -46,7 +45,7 @@ script:
    fi
 
 after_success:
-  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CC" == "gcc" -a "$TRAVIS_SECURE_ENV_VARS" == "true" ];
+  - if [ "$TRAVIS_OS_NAME" == "linux" -a "$CC" == "gcc"];
       then bash .ci/deploy-docs.sh;
     fi
 
