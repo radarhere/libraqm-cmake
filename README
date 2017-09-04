@@ -75,7 +75,7 @@ make docs
 ```
 It will create an "html" directory in TOP\_LEVEL/build/raqm/html
 
-To run the units tests, pass `-DUNIT_TEST=1` to the `cmake` command.
+To run the tests, pass `-DUNIT_TEST=1` to the `cmake` command.
 
 ```
 cmake -DUNIT_TEST=1 ..
