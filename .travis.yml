@@ -1,5 +1,4 @@
-sudo: required # needed for trusty beta
-dist: trusty   # needed for HarfBuzz
+dist: xenial
 services:
 - docker
 
